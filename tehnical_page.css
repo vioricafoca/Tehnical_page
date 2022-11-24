@@ -1,88 +1,104 @@
-html,
 body {
-    min-width: 290px;
-    color: black;
-    background-color: #fcfdff;
-    font-family: Lato, sans-serif;
-    line-height: 1.8;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 #navbar {
-    position: fixed;
-    min-width: 290px;
-    width: 20%;
-    height: 100%;
-    box-shadow: 2px 2px 6px rgb(0 0 0 / 90%);
-}
-
-header {
-    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;;
-    color: black;
-    margin: 10px;
-    text-align: center;
-    font-size: 21px;
-    font-weight: bold;
-}
-
-#main-doc header {
-    text-align: left;
-}
-
-section article {
-    color: black;
-    margin: 15px;
-    font-size: 20px;
-}
-
-#main-doc {
-    position: absolute;
-    margin-left: 310px;
-    padding: 20px;
-    margin-bottom: 110px;
-}
-
-#navbar ul {
-    list-style-type: none;
-    width: 20%;
-    height: 84%;
-    padding: 0;
-    background-color: #e0dee4;
-    position: fixed;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-#navbar li a {
-    display: block;
-    color: #383e5f;
-    padding: 8px 16px;
-    line-height: 40px;
-    font-size: 20px;
-    text-decoration: none;
-    box-shadow: 1px 1px 2px #777;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+  background-color: #ebeceb;
 }
 
 #navbar a {
-    display: block;
-    padding: 10px 30px;
-    color: #4d4e53;
-    text-decoration: none;
-    cursor: pointer;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: #191970;
+}
+#navbar a.active {
+  background-color: #04aa6d;
+  color: white;
 }
 
-li a.active {
-    background-color: darkgray;
-    color: white;
+#navbar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
 }
 
-li a:hover:not(.active) {
-    background-color: darkgray;
-    color: white;
+#main-doc {
+  position: absolute;
+  padding: 10px;
+  margin: 40px 20px 110px 250px;
+}
+@media only screen and (max-width: 815px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+}
+@media only screen and (max-width: 815px) {
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #navbar a {
+    text-align: center;
+    float: none;
+  }
+}
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
 }
 
-#main-section {
-    margin-left: 25%;
-    padding: 1px 16px;
-    height: 1000px;
+#main-doc header {
+  margin: 0px;
 }
 
+#navbar ul {
+  height: 88%;
+  color: #4d4e53;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+ul li {
+  color: black;
+}
+section article {
+  color: #2f4f4f;
+  margin: 20px;
+  font-size: 18px;
+  line-height: 35px;
+}
+section li {
+  margin: 15px 0px 0px 20px;
+}
